@@ -7,7 +7,7 @@ def get_divisors(number)
     array << divisor
     divisor +=1
   end
-  array
+  (number > 0 && array.empty?) ? array=2 : array
 end
 
 

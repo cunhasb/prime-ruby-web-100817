@@ -1,7 +1,6 @@
 # Add  code here!
 #trial division method
-
-def prime?(number)
+def get_divisors(number)
   array=[]
   divisor=2
   until divisor**2 >= number
@@ -11,4 +10,16 @@ def prime?(number)
   array
 end
 
-    
+
+def prime?(number)
+  prime = false
+  divisors = get_divisors(number)
+  divisors.each do |divisor|
+    if (n % divisor) == 0
+      break
+    else
+      prime = true
+    end
+  end
+    prime
+end

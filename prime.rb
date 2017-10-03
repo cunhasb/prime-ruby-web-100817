@@ -15,7 +15,7 @@ def prime?(number)
   prime = true
   divisors = get_divisors(number)
   divisors.each do |divisor|
-    if (number % divisor) == 0 && number > 1
+    if (number % divisor) == 0
       return false
     end
   end

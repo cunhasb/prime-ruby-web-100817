@@ -12,11 +12,11 @@ end
 
 
 def prime?(number)
-  prime = true if number > 1
+  prime = false
   divisors = get_divisors(number)
   divisors.each do |divisor|
-    if (number % divisor) == 0
-      return false
+    if (number % divisor) != 0
+      return true
     end
   end
   prime
